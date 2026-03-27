@@ -4,27 +4,31 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { spawn } from "child_process";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const foods = [
     { 
         id: 1, 
-        name: "Single Meal Box", 
+        name: "Single",
+        highlight: "Meal Box",
         price: "$18", 
         tagLine: "Freshly prepared, balanced nutrition with premium ingredients.",
-        image: "/i1.png", 
+        image: "/i3.png", 
         tag: "Daily Fans" },
     { 
         id: 2, 
-        name: "Monthly Subscription Meal", 
+        name: "Monthly ",
+        highlight: "Subscription Meal",
         price: "$14", 
         tagLine: "Pay once & enjoy fresh meals for 30 Day's",
         image: "/i2.png", 
         tag: "Most Affordable" },
     { 
         id: 3, 
-        name: "Customize Your Meal", 
+        name: "Customize ", 
+        highlight: "Your Meal",
         price: "$22", 
         tagLine: "Crafted by you, Preparde by us, Just the way you like",
         image: "/food-3.png", 
@@ -103,7 +107,7 @@ export default function FoodStory() {
                             
                             <div className="p-6">
                                 <div className="flex justify-center items-start mb-2">
-                                    <h3 className="text-xl font-bold tracking-tight">{food.name}</h3>
+                                    <h3 className="text-xl font-bold tracking-tight">{food.name} <span className="text-[var(--brand-green)]">{food.highlight}</span></h3>
                                     {/* <span className="text-lg font-medium text-[var(--brand-green)]">{food.price}</span> */}
                                 </div>
                                 <p className="text-foreground/60 text-sm mb-4 text-center">

@@ -39,7 +39,7 @@ export default function Testimonials() {
             <div className="container mx-auto px-6 overflow-hidden">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-balance">
-                        Loved By Thousands
+                        Loved By <span className="text-[var(--brand-green)]">local's</span>
                     </h2>
                     <p className="text-background/60 max-w-xl mx-auto text-lg">
                         Don't just take our word for it. See what our customers are saying.

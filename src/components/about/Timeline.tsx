@@ -88,7 +88,7 @@ export default function Timeline() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-24">
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-balance">
-                        Our Food Journey
+                        Our  <span className="text-[var(--brand-green)]"> Food Journey</span>
                     </h2>
                     <p className="text-foreground/60 max-w-2xl mx-auto text-xl">
                         From the soil to your plate. Experience the transparency of our process.

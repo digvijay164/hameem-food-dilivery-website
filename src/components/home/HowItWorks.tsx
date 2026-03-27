@@ -55,7 +55,7 @@ export default function HowItWorks() {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-balance">
-                        How It Works
+                        How <span className="text-[var(--brand-green)]">It Works</span>
                     </h2>
                     <p className="text-foreground/60 max-w-xl mx-auto text-lg">
                         Three simple steps to enjoying premium meals at home.
