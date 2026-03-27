@@ -47,30 +47,36 @@ export default function Timeline() {
 
             // Node pop animation
             gsap.utils.toArray(".timeline-node").forEach((node: any) => {
-                gsap.from(node, {
-                    scale: 0,
-                    opacity: 0,
-                    duration: 0.6,
-                    ease: "back.out(2)",
-                    scrollTrigger: {
-                        trigger: node,
-                        start: "top 70%",
+                gsap.fromTo(node, 
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "back.out(2)",
+                        scrollTrigger: {
+                            trigger: node,
+                            start: "top 70%",
+                        }
                     }
-                });
+                );
             });
 
             // Content slide animation
             gsap.utils.toArray(".timeline-content").forEach((content: any, i: number) => {
-                gsap.from(content, {
-                    x: i % 2 === 0 ? 50 : -50,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: content,
-                        start: "top 75%",
+                gsap.fromTo(content, 
+                    { x: i % 2 === 0 ? 50 : -50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: content,
+                            start: "top 75%",
+                        }
                     }
-                });
+                );
             });
 
         }, containerRef);
@@ -91,24 +97,24 @@ export default function Timeline() {
 
                 <div className="relative max-w-4xl mx-auto">
                     {/* Central Line */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-foreground/10 -translate-x-1/2 origin-top timeline-line" />
+                    <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 bg-foreground/10 md:-translate-x-1/2 origin-top timeline-line" />
 
                     {events.map((event, index) => {
                         const Icon = event.icon;
                         const isEven = index % 2 !== 0; // Using odd for right side
 
                         return (
-                            <div key={index} className={`relative flex items-center justify-between w-full mb-24 last:mb-0 ${isEven ? "flex-row-reverse" : ""}`}>
+                            <div key={index} className={`relative flex items-center md:justify-between w-full mb-24 last:mb-0 ${isEven ? "md:flex-row-reverse" : "flex-row"}`}>
                                 {/* Space for the other side */}
                                 <div className="w-5/12 hidden md:block" />
 
                                 {/* Center Node */}
-                                <div className="absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[var(--brand-green)] border-4 border-background flex items-center justify-center text-white z-10 timeline-node shadow-lg shadow-[var(--brand-green)]/30">
+                                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[var(--brand-green)] border-4 border-background flex items-center justify-center text-white z-10 timeline-node shadow-lg shadow-[var(--brand-green)]/30">
                                     <Icon className="w-8 h-8" />
                                 </div>
 
                                 {/* Content */}
-                                <div className={`w-[85%] md:w-5/12 md:pl-0 pl-12 timeline-content ${isEven ? "md:text-right" : "md:text-left"}`}>
+                                <div className={`w-full md:w-5/12 pl-24 md:pl-0 timeline-content ${isEven ? "md:text-right text-left" : "text-left"}`}>
                                     <h3 className="text-3xl font-bold tracking-tight mb-4">{event.title}</h3>
                                     <p className="text-foreground/70 text-lg leading-relaxed">{event.description}</p>
                                 </div>
