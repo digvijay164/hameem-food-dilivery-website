@@ -20,7 +20,7 @@ const foods = [
         name: "Monthly Subscription Meal", 
         price: "$14", 
         tagLine: "Pay once & enjoy fresh meals for 30 Day's",
-        image: "/i1.png", 
+        image: "/i2.png", 
         tag: "Most Affordable" },
     { 
         id: 3, 
