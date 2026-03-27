@@ -19,30 +19,36 @@ export default function Benefits() {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Stagger benefits
-            gsap.from(".benefit-card", {
-                y: 50,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 0.8,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: ".benefits-grid",
-                    start: "top 80%",
+            gsap.fromTo(".benefit-card", 
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.2,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".benefits-grid",
+                        start: "top 80%",
+                    }
                 }
-            });
+            );
 
             // Process steps animation
-            gsap.from(".process-step", {
-                scale: 0.8,
-                opacity: 0,
-                stagger: 0.3,
-                duration: 1,
-                ease: "back.out(1.5)",
-                scrollTrigger: {
-                    trigger: ".process-container",
-                    start: "top 75%",
+            gsap.fromTo(".process-step", 
+                { scale: 0.8, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    stagger: 0.3,
+                    duration: 1,
+                    ease: "back.out(1.5)",
+                    scrollTrigger: {
+                        trigger: ".process-container",
+                        start: "top 75%",
+                    }
                 }
-            });
+            );
         }, containerRef);
         return () => ctx.revert();
     }, []);
@@ -69,7 +75,7 @@ export default function Benefits() {
                 {/* Process Steps */}
                 <div className="process-container text-center">
                     <h2 className="text-4xl font-bold tracking-tighter mb-16">How It Works</h2>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 relative">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 relative">
                         {/* Desktop connecting line */}
                         <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-1 bg-[var(--brand-green)]/20 -z-10" />
 

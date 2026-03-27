@@ -8,9 +8,9 @@ import { Star } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const reviews = [
-    { name: "Sarah J.", role: "Food Critic", text: "The quality is simply unmatched. It feels like dining at a 5-star restaurant in my own home.", rating: 5, emoji: "🤤" },
-    { name: "Michael T.", role: "Fitness Coach", text: "Finally, healthy food that actually tastes amazing. Clean ingredients and perfect portion sizes.", rating: 5, emoji: "🔥" },
-    { name: "Jessica R.", role: "Busy Professional", text: "Hameem saves me so much time without compromising on flavor. The delivery is always on point.", rating: 5, emoji: "❤️" },
+    { name: "Akhil Shaikh", role: "Student", text: "The quality is simply unmatched. It feels like dining at a 5 star food in my own home.", rating: 5, emoji: "💯" },
+    { name: "Digvijay Desai", role: "Software Engineeer", text: "Finally, healthy food that actually tastes amazing. Clean ingredients and perfect portion sizes.", rating: 5, emoji: "🔥" },
+    { name: "Mahaveer Magdum", role: "Busy Professional", text: "Hameem saves me so much time without compromising on flavor. The delivery is always on point.", rating: 5, emoji: "❤️" },
 ];
 
 export default function Testimonials() {

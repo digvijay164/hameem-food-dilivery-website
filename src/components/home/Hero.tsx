@@ -79,12 +79,20 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <div ref={imageRef} className="relative w-full h-full transform will-change-transform">
-                    <Image
+                    {/* <Image
                         src="/hero-food.png"
                         alt="Delicious fresh meal"
                         fill
                         className="object-cover opacity-60"
                         priority
+                    /> */}
+                    <video
+                        src="/hero-setion.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-60"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/40 to-transparent" />
                 </div>
@@ -98,16 +106,17 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="container relative z-20 mx-auto px-6 pt-20">
+            <div className="container relative  flex items-center justify-center text-center z-20 mx-auto px-6 ">
                 <div ref={textRef} className="max-w-3xl text-white">
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[1.05] mb-6 drop-shadow-lg">
-                        Freshness<br />
-                        <span className="text-[var(--brand-green)]">Delivered.</span>
+                        Fresh Food<br />
+                        <span className="text-[var(--brand-green)]">Fresh Energy</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-xl text-balance drop-shadow-md">
-                        Premium, healthy, and delicious meals crafted by chefs and delivered to your door in minutes.
+                        {/* Premium, healthy, and delicious meals crafted by chefs and delivered to your door in minutes. */}
+                        Fresh and affordable everyday meals for students and professional delivered fast 
                     </p>
-                    <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex flex-wrap items-center justify-center gap-4">
                         <Link
                             href="/order"
                             className="bg-[var(--brand-green)] text-white px-8 py-4 rounded-full font-medium text-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform"

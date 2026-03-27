@@ -40,7 +40,7 @@ export default function PartnerForm() {
     return (
         <section ref={containerRef} className="py-24 bg-foreground text-background relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-2xl relative z-10">
-                <div className="bg-background text-foreground p-8 md:p-12 rounded-[2rem] shadow-2xl">
+                <div className="bg-background text-foreground p-8 border md:p-12 rounded-[2rem] shadow-2xl">
                     {!isSubmitted ? (
                         <>
                             <h2 className="text-3xl font-bold tracking-tighter mb-2 text-center">Become a Partner</h2>

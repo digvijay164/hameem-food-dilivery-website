@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
-import Preloader from "@/components/layout/Preloader";
+// import Preloader from "@/components/layout/Preloader";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fontSans.variable} font-sans antialiased text-foreground bg-background`}>
         <SmoothScroll>
-          <Preloader />
+          {/* <Preloader /> */}
           <Navbar />
           <main className="min-h-screen">
             {children}

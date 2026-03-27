@@ -8,9 +8,27 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const foods = [
-    { id: 1, name: "Norwegian Salmon Bowl", price: "$18", image: "/food-1.png", tag: "Daily Fresh" },
-    { id: 2, name: "Artisanal Avocado Toast", price: "$14", image: "/food-2.png", tag: "Most Loved" },
-    { id: 3, name: "Truffle Mushroom Pasta", price: "$22", image: "/food-3.png", tag: "Chef's Pick" },
+    { 
+        id: 1, 
+        name: "Single Meal Box", 
+        price: "$18", 
+        tagLine: "Freshly prepared, balanced nutrition with premium ingredients.",
+        image: "/i1.png", 
+        tag: "Daily Fans" },
+    { 
+        id: 2, 
+        name: "Monthly Subscription Meal", 
+        price: "$14", 
+        tagLine: "Pay once & enjoy fresh meals for 30 Day's",
+        image: "/i1.png", 
+        tag: "Most Affordable" },
+    { 
+        id: 3, 
+        name: "Customize Your Meal", 
+        price: "$22", 
+        tagLine: "Crafted by you, Preparde by us, Just the way you like",
+        image: "/food-3.png", 
+        tag: "Your's Pick" },
 ];
 
 export default function FoodStory() {
@@ -54,11 +72,11 @@ export default function FoodStory() {
         <section ref={containerRef} className="py-32 bg-background relative z-10">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-balance">
-                        Daily Fresh Selection
+                    <h2 className="text-4xl md:text-5xl text-[var(--brand-green)] font-bold tracking-tighter mb-4 text-balance">
+                        Daily Fresh <span className="text-white">Selection</span>
                     </h2>
                     <p className="text-foreground/60 max-w-2xl text-lg">
-                        Every day, our chefs prepare a curated selection of meals crafted from locally sourced, farm-fresh ingredients.
+                        Our partners, kitchen, prepare fresh meal daily using quality, local ingredients with no frozen, no shortcuts and no unnecessary extra, just reliable affordable food delivered on time, so you can skip daily cooking and expensive takeaway
                     </p>
                 </div>
 
@@ -82,17 +100,19 @@ export default function FoodStory() {
                                     {food.tag}
                                 </div>
                             </div>
+                            
                             <div className="p-6">
-                                <div className="flex justify-between items-start mb-2">
+                                <div className="flex justify-center items-start mb-2">
                                     <h3 className="text-xl font-bold tracking-tight">{food.name}</h3>
-                                    <span className="text-lg font-medium text-[var(--brand-green)]">{food.price}</span>
+                                    {/* <span className="text-lg font-medium text-[var(--brand-green)]">{food.price}</span> */}
                                 </div>
-                                <p className="text-foreground/60 text-sm mb-4">
-                                    Freshly prepared, balanced nutrition with premium ingredients.
+                                <p className="text-foreground/60 text-sm mb-4 text-center">
+                                {food.tagLine}
+                                    {/* Freshly prepared, balanced nutrition with premium ingredients. */}
                                 </p>
-                                <button className="w-full py-3 rounded-xl bg-foreground/5 hover:bg-[var(--brand-green)] hover:text-white transition-colors font-medium text-sm">
+                                {/* <button className="w-full py-3 rounded-xl bg-foreground/5 hover:bg-[var(--brand-green)] hover:text-white transition-colors font-medium text-sm">
                                     Add to order
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     ))}

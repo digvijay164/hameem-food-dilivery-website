@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Hero />
       <FoodStory />
-      <MenuPreview />
+      {/* <MenuPreview /> */}
       <HowItWorks />
       <Testimonials />
     </div>

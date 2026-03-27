@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 border-b border-background/10 pb-12 mb-12 md:grid-cols-4 gap-12">
                     <div className="col-span-1 md:col-span-2">
                         <Link href="/" className="text-3xl font-bold tracking-tighter text-[var(--brand-green)]">
-                            hameem.
+                            hameem
                         </Link>
                         <p className="mt-4 max-w-sm text-background/70 text-balance">
                             Premium, fresh, and delicious meals delivered directly to your door. Experience taste like never before.

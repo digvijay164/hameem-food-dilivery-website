@@ -16,7 +16,7 @@ const events = [
     {
         icon: ChefHat,
         title: "2. Artisan Preparation",
-        description: "Our Michelin-trained chefs meticulously prepare each meal to preserve nutrients and flavor.",
+        description: "Our Locally trained chefs meticulously prepare each meal to preserve nutrients and flavor.",
     },
     {
         icon: Truck,

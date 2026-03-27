@@ -5,10 +5,10 @@ import { ShoppingBag } from "lucide-react";
 
 export default function Navbar() {
     return (
-        <header className="fixed top-0 left-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-foreground/5 transition-colors">
+        <header className="fixed top-0 left-0 w-full z-40 bg-background/80 backdrop-blur-md  transition-colors">
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <Link href="/" className="text-2xl font-bold tracking-tighter text-[var(--brand-green)]">
-                    hameem.
+                    hameem
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-8 font-medium">
@@ -17,7 +17,7 @@ export default function Navbar() {
                     <Link href="/partner" className="hover:text-[var(--brand-green)] transition-colors">Partner With Us</Link>
                 </nav>
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                     <button className="relative p-2 hover:bg-foreground/5 rounded-full transition-colors">
                         <ShoppingBag className="w-5 h-5" />
                         <span className="absolute top-1 right-1 w-2 h-2 bg-[var(--brand-green)] rounded-full"></span>
@@ -28,7 +28,7 @@ export default function Navbar() {
                     >
                         Order Now
                     </Link>
-                </div>
+                </div> */}
             </div>
         </header>
     );
